@@ -1,3 +1,3 @@
-import searchRoutes from "./search/routes.ts";
+import searchRoutes from "./search/routes.js";
 
 export default {};
