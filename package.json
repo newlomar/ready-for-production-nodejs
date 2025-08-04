@@ -1,4 +1,6 @@
 {
+  "private": true,
+  "type": "module",
   "name": "ready-for-production-nodejs",
   "version": "1.0.0",
   "description": "## Made with Typescript, Postgres, Redis and some other ingredients",
