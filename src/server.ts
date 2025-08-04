@@ -1,6 +1,8 @@
 import http from "http";
-
 import express from "express";
+import { applyMiddleware, applyRoutes } from "./utils/index.js";
+import middleware from "./middleware/index.js"; // TODO: Não deveria ser "middleware(s)" no plural?
+//import routes from "./services"
 
 const router = express();
 
