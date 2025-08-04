@@ -1,0 +1,16 @@
+{
+  "name": "ready-for-production-nodejs",
+  "version": "1.0.0",
+  "description": "## Made with Typescript, Postgres, Redis and some other ingredients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tsc-watch": "^7.1.1",
+    "typescript": "^5.9.2"
+  }
+}
