@@ -4,6 +4,15 @@ import { applyMiddleware, applyRoutes } from "./utils/index.js";
 import middleware from "./middleware/index.js"; // TODO: Não deveria ser "middleware(s)" no plural?
 import routes from "./services/index.js";
 
+process.on("uncaughtException", e => {
+  console.log(e);
+  process.exit(1);
+});
+process.on("unhandledRejection", e => {
+  console.log(e);
+  process.exit(1);
+});
+
 const router = express();
 applyMiddleware(middleware, router);
 applyRoutes(routes, router);
