@@ -1,15 +1,14 @@
 import type { Response, NextFunction} from "express";
-//import { HTTPClientError, HTTP404Error } from "../utils/httpErrors.js"/
+import { HTTPClientError, HTTP404Error } from "../utils/httpErrors.js"
 
 export const notFoundError = () => {
-  // throw new HTTP404Error("Methood not found.");
-  throw new Error('Not Found');
+  throw new HTTP404Error("Methood not found.");
 }
 
 export const clientError = (err: Error, res: Response, next: NextFunction) => {
-  if (err) {
+  if (err instanceof HTTPClientError) {
     console.warn(err);
-    res.status(400).send(err.message)
+    res.status(err.statusCode).send(err.message)
   } else {
     next(err);
   }
