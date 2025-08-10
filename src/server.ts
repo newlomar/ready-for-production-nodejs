@@ -2,6 +2,7 @@ import http from "http";
 import express from "express";
 import { applyMiddleware, applyRoutes } from "./utils/index.js";
 import middleware from "./middleware/index.js"; // TODO: Não deveria ser "middleware(s)" no plural?
+import errorHandlers from "./middleware/errorHandlers.js";
 import routes from "./services/index.js";
 
 process.on("uncaughtException", e => {
@@ -16,9 +17,9 @@ process.on("unhandledRejection", e => {
 const router = express();
 applyMiddleware(middleware, router);
 applyRoutes(routes, router);
+applyMiddleware(errorHandlers, router);
 
 const { PORT = 3000 } = process.env;
-
 const server = http.createServer(router);
 
 server.listen(PORT, () => {
