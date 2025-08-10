@@ -28,6 +28,12 @@ export class HTTP401Error extends HTTPClientError {
   constructor(message: string | object = "Unauthorized") {
     super(message);
   }
+}
 
-  
+export class HTTP403Error extends HTTPClientError {
+  readonly statusCode = 403;
+
+  constructor(message: string | object = "Forbidden") {
+    super(message)
+  }
 }
