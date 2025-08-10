@@ -14,7 +14,7 @@ export default [
     method: "get",
     handler: [
       async ({ query }: Request, res: Response) => {
-        const result = await getPlacesByName(query.q);
+        const result = await getPlacesByName(query.q ? String(query.q) : "");
 
         res.status(200).send(result)
       }
