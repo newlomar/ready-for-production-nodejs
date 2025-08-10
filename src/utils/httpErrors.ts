@@ -37,3 +37,11 @@ export class HTTP403Error extends HTTPClientError {
     super(message)
   }
 }
+
+export class HTTP404Error extends HTTPClientError {
+  readonly statusCode = 404;
+
+  constructor(message: string | object = "Not Found") {
+    super(message)
+  }
+}
