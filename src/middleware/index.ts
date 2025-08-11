@@ -1,3 +1,5 @@
 import { handleCors, handleBodyRequestParsing, handleCompression } from "./common.js";
 
-export default [handleCors, handleBodyRequestParsing, handleCompression]
+import { handleAPIDocs } from "./apiDocs.js";
+
+export default [handleCors, handleBodyRequestParsing, handleCompression, handleAPIDocs]
