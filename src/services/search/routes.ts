@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 import { getPlacesByName } from "./SearchController.js"
+import { checkSearchParams } from "../../middleware/checks.js";
 
 export default [
   {
@@ -13,6 +14,7 @@ export default [
     path: "/api/v1/search",
     method: "get",
     handler: [
+      checkSearchParams,
       async ({ query }: Request, res: Response) => {
         const result = await getPlacesByName(query.q ? String(query.q) : "");
 
