@@ -25,7 +25,9 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   },
   "dependencies": {
     "@types/compression": "^1.8.1",
