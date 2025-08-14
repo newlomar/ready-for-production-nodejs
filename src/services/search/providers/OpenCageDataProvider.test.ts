@@ -13,6 +13,6 @@ describe('OpenCageDataProvider', () => {
 
   test('an invalid non-json response', () => {
     mockedAxios.get.mockRejectedValue(new Error('Service Unavailable.'));
-    await expect(getPlaces('Chamonix')).rejects.toThrow('Service Unavailable');
+    await expect(getPlaces('Chamonix')).rejects.toThrow('Service Unavailable')
   })
 })
