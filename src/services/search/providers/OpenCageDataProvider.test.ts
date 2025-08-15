@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getPlaces } from "./OpenCageDataProvider.js";
+import { getPlaces } from "./OpenCageDataProvider.ts";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
