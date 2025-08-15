@@ -11,7 +11,7 @@ describe('OpenCageDataProvider', () => {
     expect(result).toEqual({ features: [] })
   });
 
-  test('an invalid non-json response', () => {
+  test('an invalid non-json response', async () => {
     mockedAxios.get.mockRejectedValue(new Error('Service Unavailable.'));
     await expect(getPlaces('Chamonix')).rejects.toThrow('Service Unavailable')
   })
