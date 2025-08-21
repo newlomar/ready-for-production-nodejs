@@ -1,25 +1,27 @@
-import type { Request, Response } from "express";
-import { getPlacesByName } from "./SearchController.js"
-import { checkSearchParams } from "../../middleware/checks.js";
+import type { Request, Response } from 'express';
+import { getPlacesByName } from './SearchController.js';
+import { checkSearchParams } from '../../middleware/checks.js';
 
 export default [
   {
-    path: "/",
-    method: "get",
+    path: '/',
+    method: 'get',
     handler: async (req: Request, res: Response) => {
-      res.send("<h1>Hello, world!</h1><h2>Brazil, Morocco, London to Ibiza</h2><h2>Straight to LA, New York, Vegas to Africa!</h2>");
-    }
+      res.send(
+        '<h1>Hello, world!</h1><h2>Brazil, Morocco, London to Ibiza</h2><h2>Straight to LA, New York, Vegas to Africa!</h2>'
+      );
+    },
   },
   {
-    path: "/api/v1/search",
-    method: "get",
+    path: '/api/v1/search',
+    method: 'get',
     handler: [
       checkSearchParams,
       async ({ query }: Request, res: Response) => {
-        const result = await getPlacesByName(query.q ? String(query.q) : "");
+        const result = await getPlacesByName(query.q ? String(query.q) : '');
 
-        res.status(200).send(result)
-      }
-    ]
-  }
-]
+        res.status(200).send(result);
+      },
+    ],
+  },
+];

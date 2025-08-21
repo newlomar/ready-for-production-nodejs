@@ -1,15 +1,15 @@
-import http from "http";
-import express from "express";
-import { applyMiddleware, applyRoutes } from "./utils/index.js";
-import middleware from "./middleware/index.js"; // TODO: Não deveria ser "middleware(s)" no plural?
-import errorHandlers from "./middleware/errorHandlers.js";
-import routes from "./services/index.js";
+import http from 'http';
+import express from 'express';
+import { applyMiddleware, applyRoutes } from './utils/index.js';
+import middleware from './middleware/index.js'; // TODO: Não deveria ser "middleware(s)" no plural?
+import errorHandlers from './middleware/errorHandlers.js';
+import routes from './services/index.js';
 
-process.on("uncaughtException", e => {
+process.on('uncaughtException', (e) => {
   console.log(e);
   process.exit(1);
 });
-process.on("unhandledRejection", e => {
+process.on('unhandledRejection', (e) => {
   console.log(e);
   process.exit(1);
 });
@@ -24,5 +24,5 @@ const server = http.createServer(router);
 
 server.listen(PORT, () => {
   //setInterval(() => console.log(`Server is running on http://localhost:${PORT}`), 1000);
-  console.log(`Server is running on http://localhost:${PORT}`)
-})
+  console.log(`Server is running on http://localhost:${PORT}`);
+});

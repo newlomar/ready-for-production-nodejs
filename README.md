@@ -4,10 +4,8 @@
 
 This project is a search API.
 
-
 ### TODO
 
 1. Add JWT Auth
 
 2. Medium post
-
