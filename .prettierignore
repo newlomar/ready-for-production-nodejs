@@ -1,0 +1,14 @@
+# Dependencies
+node_modules
+
+# Build artifacts
+dist
+build
+coverage
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
