@@ -9,4 +9,4 @@ import routes from "./routes.ts";
 
 jest.mock("axios");
 
-const mockedAxios = axios as any;
+const mockedAxios = axios as jest.Mocked<typeof axios>;
