@@ -8,3 +8,5 @@ import errorHandlers from "../../middleware/errorHandlers.ts";
 import routes from "./routes.ts";
 
 jest.mock("axios");
+
+const mockedAxios = axios as any;
