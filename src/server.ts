@@ -26,3 +26,5 @@ server.listen(PORT, () => {
   //setInterval(() => console.log(`Server is running on http://localhost:${PORT}`), 1000);
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+export default server;
