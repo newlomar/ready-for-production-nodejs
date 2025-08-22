@@ -6,9 +6,9 @@ const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe('OpenCageDataProvider', () => {
   test('an empty query string', async () => {
-    mockedAxios.get.mockResolvedValue({ data: { total_results: 0 } });
+    mockedAxios.get.mockResolvedValue([]);
     const result = await getPlaces('');
-    expect(result.results).toEqual([]);
+    expect(result.results).toEqual(mockedAxios.get.mockResolvedValue([]););
   });
 
   test('an invalid non-json response', async () => {
