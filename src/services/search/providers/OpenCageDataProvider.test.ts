@@ -8,7 +8,7 @@ describe('OpenCageDataProvider', () => {
   test('an empty query string', async () => {
     mockedAxios.get.mockResolvedValue([]);
     const result = await getPlaces('');
-    expect(result.results).toEqual(mockedAxios.get.mockResolvedValue([]););
+    expect(result.results).toEqual([]);
   });
 
   test('an invalid non-json response', async () => {
