@@ -1,18 +1,18 @@
-import axios from 'axios';
 import { getPlaces } from './OpenCageDataProvider.ts';
 
-jest.mock('axios');
-const mockedAxios = axios as jest.Mocked<typeof axios>;
-
 describe('OpenCageDataProvider', () => {
+  const mockFetch = jest.spyOn(global, 'fetch');
+
+  beforeEach(() => {
+    mockFetch.mockClear();
+  });
+
   test('an empty query string', async () => {
-    mockedAxios.get.mockResolvedValue([]);
     const result = await getPlaces('');
     expect(result.results).toEqual([]);
   });
 
   test('an invalid non-json response', async () => {
-    mockedAxios.get.mockRejectedValue(new Error('Service Unavailable.'));
     await expect(getPlaces('Chamonix')).rejects.toThrow('Service Unavailable');
   });
 });
