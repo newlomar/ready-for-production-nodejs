@@ -7,12 +7,6 @@ import errorHandlers from '../../middleware/errorHandlers.ts';
 import routes from './routes.ts';
 import server from '../../server.ts';
 
-jest.mock('axios');
-
-const mockedAxios = axios as jest.Mocked<typeof axios>;
-
-mockedAxios.get.mockResolvedValue({ data: { features: [] } });
-
 describe('routes', () => {
   test('a valid string query', async () => {
     const response = await request(server).get('/api/v1/search?q=Cham');
