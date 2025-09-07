@@ -14,7 +14,7 @@ https://medium.com/itnext/production-ready-node-js-rest-apis-setup-using-typescr
 
 - TypeORM
 
-- Pinojs
+- Pinojs (replacing Winston)
 
 - Redis
 
