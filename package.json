@@ -6,9 +6,11 @@
   "description": "## Made with Typescript, Postgres, Redis and some other ingredients",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "dev": "tsc-watch --onSuccess \"node ./dist/server.js\"",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "postinstall": "npm run build",
     "start": "NODE_ENV=production npx pm2 start pm2.yaml",
     "test": "jest --coverage --verbose"
   },
