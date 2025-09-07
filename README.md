@@ -19,6 +19,7 @@ https://medium.com/itnext/production-ready-node-js-rest-apis-setup-using-typescr
 - Pinojs (replacing Winston)
 
 - External API Integration (OpenCage Geocording API)
+  - Tests on How to Test External API Integration
 
 - PM2
 
