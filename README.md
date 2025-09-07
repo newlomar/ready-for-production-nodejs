@@ -6,6 +6,26 @@ https://medium.com/itnext/production-ready-node-js-rest-apis-setup-using-typescr
 
 ## Made with Typescript, Postgres, Redis and some other ingredients
 
+- Typescript
+
+- Express
+
+- PostgreSQL
+
+- TypeORM
+
+- Pinojs
+
+- Redis
+
+- PM2
+
+- Jest
+
+- Supertest
+
+- Swagger
+
 This project is a search API.
 
 - Made with https://github.com/pinojs/pino instead of Winston from original post
