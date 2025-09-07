@@ -10,13 +10,15 @@ https://medium.com/itnext/production-ready-node-js-rest-apis-setup-using-typescr
 
 - Express
 
+- Redis
+
 - PostgreSQL
 
 - TypeORM
 
 - Pinojs (replacing Winston)
 
-- Redis
+- External API Integration (OpenCage Geocording API)
 
 - PM2
 
