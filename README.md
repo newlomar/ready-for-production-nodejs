@@ -8,6 +8,8 @@ https://medium.com/itnext/production-ready-node-js-rest-apis-setup-using-typescr
 
 This project is a search API.
 
+- Made with https://github.com/pinojs/pino instead of Winston from original post
+
 ### TODO
 
 1. Add JWT Auth
