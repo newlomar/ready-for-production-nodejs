@@ -6,6 +6,8 @@ https://medium.com/itnext/production-ready-node-js-rest-apis-setup-using-typescr
 
 ## Made with Typescript, Postgres, Redis and some other ingredients
 
+This project will at least one example of:
+
 - Typescript
 
 - Express
@@ -29,12 +31,31 @@ https://medium.com/itnext/production-ready-node-js-rest-apis-setup-using-typescr
 
 - Swagger
 
-This project is a search API.
+- JWT Auth
 
-- Made with https://github.com/pinojs/pino instead of Winston from original post
+- Serverless/lambda
+
+- Load test
+  - Artillery
+  - k6
+
+- Production Postgres Optimization
+  - At least 3 different configurations and it's explanations
+
+- Tanstack Query
+
+- Tanstack Router
+
+- Astro for Landing Pages
+
+- AWS most Common free tier integrations
+
+- S3 signed URL example
+
+- WebSockets Example
+
+- Server-Sent Events (SSE) Example
+
+- Stream de Dados em Nodejs
 
 ### TODO
-
-1. Add JWT Auth
-
-2. Medium post
