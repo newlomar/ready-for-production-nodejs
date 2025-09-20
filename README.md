@@ -58,4 +58,6 @@ This project will at least one example of:
 
 - Stream de Dados em Nodejs
 
+- Production CLI with nodejs
+
 ### TODO
